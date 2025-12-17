@@ -1,5 +1,4 @@
-Aggregation Questions
-Use the SQL environment below to find the solution for each of the following questions.
+Aggregation - SUM
 
 1. Find the total amount of poster_qty paper ordered in the orders table.
 
@@ -18,8 +17,7 @@ SELECT SUM(total_amt_usd) AS total_sales_revenue
 
 4. Find the total amount spent on standard_amt_usd and gloss_amt_usd paper for each order in the orders table. 
 
-SELECT SUM(standard_amt_usd) AS total_standard_revenue,
-       SUM(gloss_amt_usd) AS total_gloss_revenue
+SELECT standard_amt_usd + gloss_amt_usd AS total_standard_gloss
   FROM orders
 
 5. Find the standard_amt_usd per unit of standard_qty paper.
